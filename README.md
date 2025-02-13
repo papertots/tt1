@@ -14,12 +14,20 @@ Run `./<name of the executable> <quote enclosed string>` to use the compiled
 code for testing.
 
 Run `vimdiff tt1_fixed.c tt1_incorrect.c` for comparison of difference between
-submitted solution and a form of correct solution.
+submitted solution and a form of correct solution with minor changes.
+
+Alternatively, below is a screenshot of the output of the `vimdiff` command:
+![Description: a vimdiff comparsion of tt1_fixed.c and tt1_incorrect.c](image.png)
 
 ## Reason
 
+In brief: I believe the penalty was too high compared to the amount and scope of 
+mistakes.
+
+Details:
+
 The submitted code compiles without errors, and only contains 2 minor logic 
-errors that prevent it from working correctly:
+errors that prevent it from working correctly and to specification:
 
 1. (-1) Off-by-one error during the for loop, fixed by moving a block of the
 condition outside the loop. This also makes the malloc call below allocate the
@@ -34,3 +42,4 @@ assignments.
 3. Temporarily allocating a buffer char array in the stack was not disallowed.
 
 Therefore, in my opinion, the penalty should be at most -2, instead of -3.
+Thank you for your time.
